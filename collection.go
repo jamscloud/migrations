@@ -18,7 +18,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/go-pg/pg/v10"
+	"github.com/jamscloud/pg/v10"
 )
 
 type Migration struct {
@@ -133,7 +133,7 @@ func migrationFile() string {
 		if !ok {
 			break
 		}
-		if !strings.Contains(f.Function, "/go-pg/migrations") {
+		if !strings.Contains(f.Function, "/jamscloud/migrations") {
 			return f.File
 		}
 	}
@@ -748,7 +748,7 @@ func createMigrationFile(filename string) error {
 var migrationTemplate = []byte(`package main
 
 import (
-	"github.com/go-pg/migrations"
+	"github.com/jamscloud/migrations"
 )
 
 func init() {

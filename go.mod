@@ -1,5 +1,5 @@
-module github.com/go-pg/migrations/v8
+module github.com/jamscloud/migrations/v8
 
-go 1.11
+go 1.14
 
-require github.com/go-pg/pg/v10 v10.0.0-beta.6
+require github.com/jamscloud/pg/v10 v10.0.2-beta.8
